@@ -22,3 +22,16 @@ if [ -f "$tmp" ]; then
 fi
 }
 bindkey -s '^o' 'lfcd\n'
+
+: '
+change file encoding
+
+usage:
+chfenc filename from_enc to_enc
+
+example:
+chfenc "*.smi" cp949 utf8
+'
+function chfenc () {
+    find . -type f -name $1 -exec sh -c 'iconv -f '$2' -t '$3' "$0" > "$0.tmp"' '{}' \; -exec mv -f '{}.tmp' '{}' \;
+}
