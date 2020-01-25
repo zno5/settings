@@ -1,11 +1,18 @@
 # ~/.oh-my-zsh/custom
 
-function buildcpp() {
+# aliases
+
+alias df='df -h'
+
+
+# functions
+
+function buildcpp () {
     clang++ -std=c++17 $1
 }
 
 # Use lf to switch directories and bind it to ctrl-o
-lfcd () {
+function lfcd () {
     tmp="$(mktemp)"
     lf -last-dir-path="$tmp" "$@"
 if [ -f "$tmp" ]; then
