@@ -39,7 +39,7 @@ function chfenc () {
 # change file name encoding
 # usage : chnenc path from_enc to_enc
 function chnenc () {
-    find $1 ! -path . -depth -exec sh -c 'mv "{}" "{}_tmp" ; echo {} | iconv -f '$2' -t '$3 \; | xargs -I% mv '%_tmp' '%'
+    find $1 ! -path . -depth -exec sh -c 'x=$( mv "{}" "{}_tmp" ; echo "{}" | iconv -f '$2' -t '$3' ) ; mv "$x"_tmp "$x"' \;
 }
 
 # change file name encoding to NFC
