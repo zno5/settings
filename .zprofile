@@ -1,8 +1,3 @@
-# get aliases and functions
-if [ -f ~/.zshrc ]; then
-    . ~/.zshrc
-fi
-
 # user specific environment and startup programs
 
 # get the paths

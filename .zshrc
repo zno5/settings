@@ -109,6 +109,8 @@ export LANG=en_US.UTF-8
 # export ARCHFLAGS="-arch x86_64"
 
 
+export GPG_TTY=$(tty)
+
 set -o noclobber
 
 
