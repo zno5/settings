@@ -3,6 +3,8 @@
 # aliases
 
 alias df='df -h'
+alias less='less -R'
+alias ls='CLICOLOR_FORCE=1 ls -G'
 
 
 # functions
