@@ -13,11 +13,15 @@ Plugin 'ntpeters/vim-better-whitespace'
 Plugin 'Raimondi/delimitMate'
 Plugin 'mhinz/vim-startify'
 
+Plugin 'altercation/vim-colors-solarized'
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 syn on
-colorscheme torte
+colorscheme solarized
+set background=light
+"colorscheme torte
 set nu
 set showmatch
 set cindent
@@ -31,7 +35,7 @@ set colorcolumn=81
 set hlsearch
 set incsearch
 set cursorline
-hi cursorline guibg=Grey15
+hi cursorline guibg=#EEE8D5
 set mouse=a
 set laststatus=2
 
@@ -53,8 +57,8 @@ set fileencoding=utf-8
 set enc=utf-8
 set ff=unix
 
-
-let g:airline_theme='simple'
+let g:airline_theme='solarized'
+"let g:airline_theme='simple'
 
 if has('gui_running')
     " https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Meslo/S
